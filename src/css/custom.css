@@ -1,0 +1,73 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #002244;
+  --ifm-color-primary-dark: #001f3d;
+  --ifm-color-primary-darker: #001d3a;
+  --ifm-color-primary-darkest: #001830;
+  --ifm-color-primary-light: #00254b;
+  --ifm-color-primary-lighter: #00274e;
+  --ifm-color-primary-lightest: #002c58;
+  --ifm-code-font-size: 95%;
+
+  --ifm-footer-padding-vertical: 20px;
+  --ifm-footer-link-hover-color: #b0b7bc;
+}
+
+html[data-theme="dark"] {
+  --ifm-color-primary: #b0b7bc;
+  --ifm-color-primary-dark: #9ca5ab;
+  --ifm-color-primary-darker: #929ca3;
+  --ifm-color-primary-darkest: #75818a;
+  --ifm-color-primary-light: #c4c9cd;
+  --ifm-color-primary-lighter: #ced2d5;
+  --ifm-color-primary-lightest: #ebedee;
+
+  --ifm-navbar-background-color: #002244;
+  --ifm-navbar-link-color: #b0b7bc;
+  --ifm-navbar-link-hover-color: #fff;
+}
+
+html[data-theme="light"] .hero--home,
+html[data-theme="dark"] .hero--home {
+  background-color: #002244;
+}
+
+html[data-theme="light"] footer.footer,
+html[data-theme="dark"] footer.footer,
+html[data-theme="light"] .footer-wrapper,
+html[data-theme="dark"] .footer-wrapper {
+  background-color: #002244;
+  color: var(--ifm-footer-color);
+}
+
+.blogPostTitle_node_modules-\@docusaurus-theme-classic-lib-next-theme-BlogPostItem-styles-module {
+  font-size: 2.25rem !important;
+}
+
+.blogPostTitle_node_modules-\@docusaurus-theme-classic-lib-next-theme-BlogPostItem-styles-module
+  a {
+  color: var(--ifm-color-primary-lightest);
+  font-size: 2rem !important;
+}
+
+.w-full {
+  width: 100%;
+}
+
+/* https://docusaurus.io/docs/markdown-features/code-blocks#line-highlighting */
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+  display: block;
+  margin: 0 calc(-1 * var(--ifm-pre-padding));
+  padding: 0 var(--ifm-pre-padding);
+}
+
+html[data-theme="dark"] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
