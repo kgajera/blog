@@ -4,23 +4,29 @@ import React from "react";
 export default function Footer(props) {
   return (
     <div className="footer-wrapper footer--dark">
-      <div className="container margin-top--lg">
-        <div className="row">
-          <div className="col col--6 col--offset-2">
+      <div className="container margin-vert--lg">
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <div style={{ flexGrow: 1, maxWidth: 650 }}>
             <h3>About Kishan Gajera</h3>I am a highly motivated and passionate
             full-stack web developer. You'll mostly find me working with
             JavaScript on both client and server side. I strive to build web
             applications and libraries that countless people will find useful.
           </div>
-          <div className="col col--4">
-            <img
-              src="/img/headshot.jpeg"
-              style={{
-                borderRadius: "50%",
-                maxWidth: 140,
-              }}
-            />
-          </div>
+          <img
+            src="/img/headshot.jpeg"
+            style={{
+              borderRadius: "50%",
+              height: 120,
+              marginLeft: 10,
+              width: 120,
+            }}
+          />
         </div>
       </div>
       <OriginalFooter {...props} />
