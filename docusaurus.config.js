@@ -51,6 +51,7 @@ const config = {
         routeBasePath: "work",
         path: "./blog-work",
         blogSidebarCount: 0,
+        blogTitle: "Featured Work",
         showReadingTime: false,
       },
     ],
