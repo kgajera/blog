@@ -1,0 +1,50 @@
+name: Build
+
+on:
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: "16"
+          cache: "yarn"
+      - run: yarn install --frozen-lockfile
+      - run: yarn typecheck
+      - run: yarn format:check
+      - run: yarn build
+      - uses: actions/upload-artifact@v2
+        with:
+          name: build
+          path: build/
+          retention-days: 1
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_REGION: us-east-1
+
+    steps:
+      - uses: actions/download-artifact@v2
+        with:
+          name: build
+      - name: AWS S3 - Empty Bucket
+        uses: docker://amazon/aws-cli
+        with:
+          args: s3 rm s3://${{ secrets.AWS_S3_BUCKET }} --recursive
+      - name: AWS S3 - Upload Build
+        uses: docker://amazon/aws-cli
+        with:
+          args: s3 cp . s3://${{ secrets.AWS_S3_BUCKET }} --recursive
+      - name: AWS Cloudfront - Invalidate Cache
+        uses: docker://amazon/aws-cli
+        with:
+          args: cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUDFRONT_DISTRIBUTION_ID }} --paths "/*"
