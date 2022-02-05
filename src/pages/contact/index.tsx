@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "@theme/Layout";
-import Input from "../components/Input";
-import Textarea from "../components/Textarea";
+import Input from "../../components/Input";
+import Textarea from "../../components/Textarea";
 
 const FormField = ({
   children,
