@@ -5,7 +5,7 @@ authors: [kgajera]
 tags: [docusaurus]
 ---
 
-I've become a fan of using [Docusaurus](https://docusaurus.io) for both documentation sites as well as blogs. I'm in the process of migrating a few sites over to it. A common feature for the sites I'm building is to display a list of recent blog posts on the home page. Unfortunately, there isn't a straight forward path to do this.<!--truncate--> After much digging, here are the step's that I've taken to implement this:
+I've found [Docusaurus](https://docusaurus.io) to be a great tool for both documentation sites as well as blogs because it provides great functionality out of the box and lets you focus on your site's content. I'm in the process of migrating a few sites over to it. A common feature for the sites I'm building is to display a list of recent blog posts on the home page. Unfortunately, there isn't a straight forward path to do this.<!--truncate--> After much digging, here are the step's that I've taken to implement this:
 
 1. Extend Docusaurus' default [blog plugin](https://docusaurus.io/docs/api/plugins/@docusaurus/plugin-content-blog) to allow the following:
    - Access blog posts data
