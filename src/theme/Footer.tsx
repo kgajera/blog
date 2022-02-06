@@ -14,9 +14,9 @@ export default function Footer(props) {
         >
           <div style={{ flexGrow: 1, maxWidth: 650 }}>
             <h3>About Kishan Gajera</h3>I am a highly motivated and passionate
-            full-stack web developer. You'll mostly find me working with
-            JavaScript on both client and server side. I strive to build web
-            applications and libraries that countless people will find useful.
+            software engineer. You'll mostly find me working with JavaScript on
+            both client and server side. I strive to build web applications and
+            libraries that countless people will find useful.
           </div>
           <img
             src="/img/headshot.jpeg"

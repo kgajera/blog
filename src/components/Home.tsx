@@ -15,7 +15,7 @@ function Home({ recentPosts }: Props): JSX.Element {
           <div className="row">
             <div className="col col--9 col--offset-1">
               <h1 className="hero__title">
-                👋 I'm Kishan, a full stack developer.
+                👋 I'm Kishan, a software engineer.
               </h1>
               <p className="hero__subtitle">
                 Welcome to my development playground.
