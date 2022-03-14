@@ -3,7 +3,7 @@ import IconExternalLink from "@theme/IconExternalLink";
 
 import styles from "./styles.module.css";
 
-interface Props {
+interface BrowserWindowProps {
   children: ReactNode;
   url: string;
 }
@@ -11,7 +11,7 @@ interface Props {
 function BrowserWindow({
   children,
   url = "http://localhost:3000",
-}: Props): JSX.Element {
+}: BrowserWindowProps): JSX.Element {
   return (
     <div className={styles.browserWindow}>
       <div className={styles.browserWindowHeader}>

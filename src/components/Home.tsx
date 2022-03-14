@@ -3,11 +3,11 @@ import Layout from "@theme/Layout";
 import BlogPostItem from "@theme/BlogPostItem";
 import { Content } from "@theme/BlogPostPage";
 
-interface Props {
+interface HomeProps {
   readonly recentPosts: readonly { readonly content: Content }[];
 }
 
-function Home({ recentPosts }: Props): JSX.Element {
+function Home({ recentPosts }: HomeProps): JSX.Element {
   return (
     <Layout>
       <div className="hero hero--dark hero--home shadow--lw">
