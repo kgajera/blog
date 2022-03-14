@@ -95,6 +95,10 @@ const config = {
             label: "LinkedIn",
             href: "https://www.linkedin.com/in/kishan-gajera",
           },
+          {
+            label: "Twitter",
+            href: "https://www.twitter.com/kgajera24",
+          },
         ],
         copyright: `&copy; ${new Date().getFullYear()} Kishan Gajera. All content is the property of Kishan Gajera and KGajera.com.`,
       },
