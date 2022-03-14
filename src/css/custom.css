@@ -71,3 +71,24 @@ article h2 a {
 html[data-theme="dark"] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
 }
+
+label {
+  font-weight: var(----ifm-font-weight-semibold);
+}
+
+input,
+textarea {
+  background-color: var(--ifm-color-emphasis-200);
+  border: 2px solid var(--ifm-color-emphasis-200);
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 1rem;
+  outline: none;
+  padding: 1rem;
+  width: 100%;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--ifm-color-emphasis-900);
+}

@@ -1,0 +1,46 @@
+import React from "react";
+
+interface FormFieldProps {
+  label: string;
+}
+
+interface InputProps
+  extends FormFieldProps,
+    React.DetailedHTMLProps<
+      React.InputHTMLAttributes<HTMLInputElement>,
+      HTMLInputElement
+    > {
+  fieldType?: "input";
+}
+
+interface TexareaProps
+  extends FormFieldProps,
+    React.DetailedHTMLProps<
+      React.TextareaHTMLAttributes<HTMLTextAreaElement>,
+      HTMLTextAreaElement
+    > {
+  fieldType: "textarea";
+}
+
+const FormField = ({
+  fieldType = "input",
+  label,
+  ...props
+}: InputProps | TexareaProps) => {
+  const id = props.id ?? `form_field_${props.name}`;
+
+  return (
+    <div className="margin-vert--lg">
+      <label htmlFor={id}>{label}</label>
+      <div className="margin-top--sm">
+        {fieldType === "textarea" ? (
+          <textarea id={id} {...(props as TexareaProps)} />
+        ) : (
+          <input id={id} {...(props as InputProps)} />
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default FormField;
