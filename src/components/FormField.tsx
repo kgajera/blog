@@ -36,7 +36,7 @@ const FormField = ({
         {fieldType === "textarea" ? (
           <textarea id={id} {...(props as TexareaProps)} />
         ) : (
-          <input id={id} {...(props as InputProps)} />
+          <input id={id} type="text" {...(props as InputProps)} />
         )}
       </div>
     </div>

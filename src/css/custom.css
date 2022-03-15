@@ -76,7 +76,8 @@ label {
   font-weight: var(----ifm-font-weight-semibold);
 }
 
-input,
+input[type="email"],
+input[type="text"],
 textarea {
   background-color: var(--ifm-color-emphasis-200);
   border: 2px solid var(--ifm-color-emphasis-200);
