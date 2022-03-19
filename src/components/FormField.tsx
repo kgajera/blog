@@ -6,19 +6,19 @@ interface FormFieldProps {
 
 interface InputProps
   extends FormFieldProps,
-    React.DetailedHTMLProps<
-      React.InputHTMLAttributes<HTMLInputElement>,
-      HTMLInputElement
-    > {
+  React.DetailedHTMLProps<
+  React.InputHTMLAttributes<HTMLInputElement>,
+  HTMLInputElement
+  > {
   fieldType?: "input";
 }
 
-interface TexareaProps
+interface TextareaProps
   extends FormFieldProps,
-    React.DetailedHTMLProps<
-      React.TextareaHTMLAttributes<HTMLTextAreaElement>,
-      HTMLTextAreaElement
-    > {
+  React.DetailedHTMLProps<
+  React.TextareaHTMLAttributes<HTMLTextAreaElement>,
+  HTMLTextAreaElement
+  > {
   fieldType: "textarea";
 }
 
@@ -26,7 +26,7 @@ const FormField = ({
   fieldType = "input",
   label,
   ...props
-}: InputProps | TexareaProps) => {
+}: InputProps | TextareaProps) => {
   const id = props.id ?? `form_field_${props.name}`;
 
   return (
@@ -34,7 +34,7 @@ const FormField = ({
       <label htmlFor={id}>{label}</label>
       <div className="margin-top--sm">
         {fieldType === "textarea" ? (
-          <textarea id={id} {...(props as TexareaProps)} />
+          <textarea id={id} {...(props as TextareaProps)} />
         ) : (
           <input id={id} type="text" {...(props as InputProps)} />
         )}
