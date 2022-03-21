@@ -6,19 +6,19 @@ interface FormFieldProps {
 
 interface InputProps
   extends FormFieldProps,
-  React.DetailedHTMLProps<
-  React.InputHTMLAttributes<HTMLInputElement>,
-  HTMLInputElement
-  > {
+    React.DetailedHTMLProps<
+      React.InputHTMLAttributes<HTMLInputElement>,
+      HTMLInputElement
+    > {
   fieldType?: "input";
 }
 
 interface TextareaProps
   extends FormFieldProps,
-  React.DetailedHTMLProps<
-  React.TextareaHTMLAttributes<HTMLTextAreaElement>,
-  HTMLTextAreaElement
-  > {
+    React.DetailedHTMLProps<
+      React.TextareaHTMLAttributes<HTMLTextAreaElement>,
+      HTMLTextAreaElement
+    > {
   fieldType: "textarea";
 }
 
