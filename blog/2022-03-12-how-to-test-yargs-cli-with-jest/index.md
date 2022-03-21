@@ -1,6 +1,7 @@
 ---
 slug: how-to-test-yargs-cli-with-jest
 title: How to Test Yargs CLI with Jest
+image: ./image.png
 authors: [kgajera]
 tags: [cli, jest, yargs]
 ---
