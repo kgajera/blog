@@ -1,6 +1,7 @@
 ---
 slug: dynamic-sitemap-for-angular-universal-and-contentful
 title: Dynamic Sitemap for Angular Universal and Contentful
+image: ./image.png
 authors: [kgajera]
 tags: [angular, angular universal, contentful]
 ---

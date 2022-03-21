@@ -1,6 +1,7 @@
 ---
 slug: improve-angular-ssr-performance-using-redis-cache
 title: Improve Angular SSR performance using Redis cache
+image: ./image.png
 authors: [kgajera]
 tags: [angular, angular universal, redis]
 ---

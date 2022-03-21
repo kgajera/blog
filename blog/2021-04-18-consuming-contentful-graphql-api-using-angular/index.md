@@ -1,6 +1,7 @@
 ---
 slug: consuming-contentful-graphql-api-using-angular
 title: Consuming Contentful GraphQL API using Angular
+image: ./graphiql.png
 authors: [kgajera]
 tags: [angular, angular universal, contentful, graphql]
 ---

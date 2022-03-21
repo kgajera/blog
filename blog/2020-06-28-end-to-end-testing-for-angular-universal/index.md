@@ -1,6 +1,7 @@
 ---
 slug: end-to-end-testing-for-angular-universal
 title: End-to-End Testing for Angular Universal
+image: ./image.png
 authors: [kgajera]
 tags: [angular, angular universal, protractor]
 ---

@@ -1,6 +1,7 @@
 ---
 slug: using-angular-as-a-front-end-for-contentful
 title: Using Angular as a front-end for Contentful
+image: ./image.png
 authors: [kgajera]
 tags: [angular, angular universal, contentful]
 ---

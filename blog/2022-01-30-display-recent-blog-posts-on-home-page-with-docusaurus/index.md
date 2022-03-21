@@ -1,6 +1,7 @@
 ---
 slug: display-recent-blog-posts-on-home-page-with-docusaurus
 title: Display Recent Blog Posts on Home Page with Docusaurus 2.0.0-beta.16
+image: ./image.png
 authors: [kgajera]
 tags: [docusaurus]
 ---
