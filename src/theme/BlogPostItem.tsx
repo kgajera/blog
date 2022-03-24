@@ -3,6 +3,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import OriginalBlogPostItem from "@theme-original/BlogPostItem";
 import type { Props } from "@theme/BlogPostItem";
 import TwitterLink from "../components/TwitterLink";
+import Head from "@docusaurus/Head";
 
 export default function BlogPostItem(props: Props) {
   const { siteConfig } = useDocusaurusContext();
@@ -13,6 +14,9 @@ export default function BlogPostItem(props: Props) {
 
   return (
     <>
+      <Head>
+        <title>{props.metadata.title}</title>
+      </Head>
       <OriginalBlogPostItem {...props} />
       <div
         className="margin-vert--lg"
