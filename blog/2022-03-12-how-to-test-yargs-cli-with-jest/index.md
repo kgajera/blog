@@ -53,8 +53,8 @@ require("yargs")
 
 This script contains two commands:
 
-- `install <name>` that will log out "Installing" to the console
-- `uninstall <name>` that will log out "Uninstalling" to the console
+- `install <name>` that will log "Installing" to the console
+- `uninstall <name>` that will log "Uninstalling" to the console
 
 Below is a documented example of how we can test both these commands:
 
@@ -112,3 +112,7 @@ async function runCommand(...args) {
   return require("./cli");
 }
 ```
+
+If you want to see another example, I used this approach to write tests for the [`create-bison-app`](https://github.com/echobind/bisonapp) CLI: https://github.com/echobind/bisonapp/blob/canary/packages/create-bison-app/test/cli.test.js
+
+Hope this helps you unit test your CLI! Get in touch with any questions or comments.
