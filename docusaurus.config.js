@@ -76,7 +76,6 @@ const config = {
           { to: "/contact", label: "Contact", position: "right" },
         ],
       },
-      hideableSidebar: false,
       footer: {
         style: "dark",
         logo: {
@@ -106,6 +105,9 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      sidebar: {
+        hideable: false,
+      }
     }),
 };
 
