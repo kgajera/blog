@@ -107,7 +107,7 @@ const config = {
       },
       sidebar: {
         hideable: false,
-      }
+      },
     }),
 };
 
