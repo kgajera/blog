@@ -42,6 +42,9 @@ const config = {
         path: "./blog",
         blogSidebarCount: 0,
         showReadingTime: true,
+        editUrl: ({ blogDirPath, blogPath }) => {
+          return `https://github.com/kgajera/blog/edit/main/${blogDirPath}/${blogPath}`;
+        },
       },
     ],
     [
