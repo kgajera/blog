@@ -104,6 +104,11 @@ const config = {
         ],
         copyright: `&copy; ${new Date().getFullYear()} Kishan Gajera. All content is the property of Kishan Gajera and KGajera.com.`,
       },
+      algolia: {
+        appId: "MMRPMU69AB",
+        apiKey: "651d4af5a91d5bf208dbeef462c7cba4",
+        indexName: "kgajera",
+      },
       prism: {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
