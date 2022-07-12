@@ -17,7 +17,11 @@
     "format:fix": "prettier --write .",
     "g:blog": "hygen blog new",
     "g:component": "hygen component new",
-    "g:page": "hygen page new"
+    "g:page": "hygen page new",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "test": "start-server-and-test test:server http://localhost:3000 cy:run",
+    "test:server": "docusaurus start --no-open"
   },
   "dependencies": {
     "@docusaurus/core": "2.0.0-beta.21",
@@ -31,9 +35,11 @@
   "devDependencies": {
     "@docusaurus/module-type-aliases": "2.0.0-beta.21",
     "@tsconfig/docusaurus": "^1.0.5",
+    "cypress": "^10.3.0",
     "hygen": "^6.2.0",
     "hygen-docusaurus": "^1.1.0",
     "prettier": "^2.5.1",
+    "start-server-and-test": "^1.14.0",
     "typescript": "^4.6.4"
   },
   "browserslist": {
