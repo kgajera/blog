@@ -188,4 +188,4 @@ export class AppComponent {
 
 The `imports` array in the component decorator should feel similar to defining imports using `NgModule`.
 
-This is a lot less code! I'm a big believer in solutions that involve writing less code due to abstraction or generation because it makes it that much easier to maintain. We've just scratched the surface of exploring standalone components. In a future posts, we'll explore routing and providers.
+This is a lot less code! I'm a big believer in solutions that involve writing less code due to abstraction or generation because it makes it that much easier to maintain. We've just scratched the surface of exploring standalone components. In a future post, we'll explore routing and providers.
