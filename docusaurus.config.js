@@ -15,6 +15,11 @@ const config = {
   favicon: "img/favicon.ico",
   organizationName: "kgajera",
   projectName: "blog",
+  customFields: {
+    projectId: "R_kgDOGyTIZA",
+    discussionCategory: "Blog Posts",
+    discussionCategoryId: "DIC_kwDOGyTIZM4CQR6B",
+  },
 
   presets: [
     [
