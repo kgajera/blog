@@ -86,7 +86,7 @@ app.post("/subscriptions", async function (req, res) {
 
 As mentioned before, we need to attach a customer to a test clock when the customer is created. We're doing this in `POST /users` endpoint. Since this functionality is only for testing purposes, we are conditionally enabling it using the `STRIPE_USE_TEST_CLOCK` environment variable. If this variable equals `'true'`, we want to create a new test clock and pass the id of it when creating the customer.
 
-In Stripe's dashboard, customers attached to a test clock with have the following icon:
+In Stripe's dashboard, customers attached to a test clock will have the following icon:
 
 ![Customers List](./customers.png)
 
