@@ -1,41 +1,36 @@
 # KGajera.com
 
-This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
+[![Build](https://github.com/kgajera/blog/actions/workflows/build.yml/badge.svg)](https://github.com/kgajera/blog/actions/workflows/build.yml)
 
-### Installation
+This website built using [Docusaurus 2](https://docusaurus.io/), a static website generator.
 
-```
-$ yarn
-```
+## Getting Started
 
-### Local Development
+1. Run `yarn` to install dependencies
+1. Run `yarn start` to start a local development server
 
-```
-$ yarn start
-```
+## Code Generation
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+Generate files using the following commands:
 
-### Build
+- `yarn g:blog` - generates a new blog post in `./blog/`
+  - Pass the `-i` flag to run in interactive mode
+- `yarn g:component` - generates a new component file in `./src/components/`
+- `yarn g:page` - generates a new page component file in `./src/pages/`
 
-```
-$ yarn build
-```
+## Production Build
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+Run `yarn build` to generate static content into the `build` directory and can be served using any static contents hosting service.
 
-### Deployment
+## AWS Deployment
 
-Using SSH:
+After configuring a S3 bucket and CloudFront distribution in your AWS account, add the following GitHub action secrets to continuously deploy on every push to the `main` branch:
 
-```
-$ USE_SSH=true yarn deploy
-```
+- `AWS_ACCESS_KEY_ID` - AWS access key
+- `AWS_CLOUDFRONT_DISTRIBUTION_ID` - CloudFront distribution id to invalidate cache
+- `AWS_S3_BUCKET` - name of S3 bucket
+- `AWS_SECRET_ACCESS_KEY` - AWS secret key
 
-Not using SSH:
+## Cloning / Forking
 
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+Please review the license and run `yarn clean` to remove all personal content such as blog posts and images.

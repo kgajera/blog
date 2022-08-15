@@ -1,0 +1,5 @@
+1. You are free to use this code to build your own website
+2. Do not copy the content in the following directories: blog, blog-work, static/img
+3. Crediting the author is appreciated
+
+No confusing license. Be kind and help others learn.
