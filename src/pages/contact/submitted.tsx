@@ -3,7 +3,7 @@ import Heading from "@theme/Heading";
 import Layout from "@theme/Layout";
 import Head from "@docusaurus/Head";
 
-const ContactSubmitted = () => {
+function ContactSubmitted() {
   return (
     <Layout title="Message Received">
       <Head>
@@ -19,6 +19,6 @@ const ContactSubmitted = () => {
       </div>
     </Layout>
   );
-};
+}
 
 export default ContactSubmitted;

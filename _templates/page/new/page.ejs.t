@@ -5,9 +5,11 @@ to: src/pages/<%= name %>.tsx
 import React from "react";
 import Layout from '@theme/Layout';
 
-export default function <%= comp %>() {
+function <%= comp %>() {
   return (
     <Layout title="<%= comp %>">
     </Layout>
   );
 }
+
+export default <%= comp %>;

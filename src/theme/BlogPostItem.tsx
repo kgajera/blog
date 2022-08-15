@@ -7,7 +7,7 @@ import OriginalBlogPostItem from "@theme-original/BlogPostItem";
 import TwitterLink from "../components/TwitterLink";
 import Giscus from "@giscus/react";
 
-export default function BlogPostItem(props: Props) {
+function BlogPostItem(props: Props) {
   const { siteConfig } = useDocusaurusContext();
   const { colorMode } = useColorMode();
 
@@ -58,3 +58,5 @@ export default function BlogPostItem(props: Props) {
     </>
   );
 }
+
+export default BlogPostItem;

@@ -22,11 +22,11 @@ interface TextareaProps
   fieldType: "textarea";
 }
 
-const FormField = ({
+function FormField({
   fieldType = "input",
   label,
   ...props
-}: InputProps | TextareaProps) => {
+}: InputProps | TextareaProps) {
   const id = props.id ?? `form_field_${props.name}`;
 
   return (
@@ -41,6 +41,6 @@ const FormField = ({
       </div>
     </div>
   );
-};
+}
 
 export default FormField;

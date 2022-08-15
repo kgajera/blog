@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "@theme/Layout";
 import FormField from "../../components/FormField";
 
-const Contact = () => {
+function Contact() {
   return (
     <Layout title="Contact">
       <div className="container margin-vert--lg">
@@ -34,6 +34,6 @@ const Contact = () => {
       </div>
     </Layout>
   );
-};
+}
 
 export default Contact;

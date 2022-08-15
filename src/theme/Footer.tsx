@@ -1,7 +1,7 @@
 import OriginalFooter from "@theme-original/Footer";
 import React from "react";
 
-export default function Footer(props) {
+function Footer(props) {
   return (
     <div className="footer-wrapper footer--dark">
       <div className="container margin-vert--lg">
@@ -33,3 +33,5 @@ export default function Footer(props) {
     </div>
   );
 }
+
+export default Footer;
