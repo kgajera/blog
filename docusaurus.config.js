@@ -113,6 +113,7 @@ const config = {
         appId: "MMRPMU69AB",
         apiKey: "651d4af5a91d5bf208dbeef462c7cba4",
         indexName: "kgajera",
+        placeholder: "Search...",
       },
       prism: {
         theme: lightCodeTheme,
