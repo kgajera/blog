@@ -58,7 +58,7 @@ npm install stripe-event-types
 When constructing the webhook event, cast it to `Stripe.DiscriminatedEvent` to strongly type the `event.type` and `event.data.object` fields:
 
 ```ts
-import "stripe-event-types";
+/// <reference types="stripe-event-types" />
 
 const event = stripe.webhooks.constructEvent(
   body,
