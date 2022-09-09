@@ -28,8 +28,7 @@ function BlogPostItem(props: Props) {
           repoId={siteConfig.customFields.projectId as string}
           category={siteConfig.customFields.discussionCategory as string}
           categoryId={siteConfig.customFields.discussionCategoryId as string}
-          mapping="specific"
-          term="Welcome to @giscus/react component!"
+          mapping="title"
           reactionsEnabled="0"
           emitMetadata="0"
           inputPosition="top"
