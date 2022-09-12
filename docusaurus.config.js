@@ -1,24 +1,26 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
+require("dotenv").config();
+
 const lightCodeTheme = require("prism-react-renderer/themes/github");
 const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: "Kishan Gajera",
+  title: process.env.SITE_TITLE,
   tagline: "",
-  url: "https://kgajera.com",
+  url: process.env.SITE_URL,
   baseUrl: "/",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/favicon.ico",
-  organizationName: "kgajera",
-  projectName: "blog",
+  organizationName: process.env.ORGANIZATION_NAME,
+  projectName: process.env.REPOSITORY_NAME,
   customFields: {
-    projectId: "R_kgDOGyTIZA",
-    discussionCategory: "Blog Posts",
-    discussionCategoryId: "DIC_kwDOGyTIZM4CQR6B",
+    projectId: process.env.GISCUS_PROJECT_ID,
+    discussionCategory: process.env.GISCUS_DISCUSSION_CATEGORY,
+    discussionCategoryId: process.env.GISCUS_DISCUSSION_CATEGORY_ID,
   },
 
   presets: [
@@ -32,7 +34,7 @@ const config = {
           customCss: require.resolve("./src/css/custom.css"),
         },
         gtag: {
-          trackingID: "G-M8Q0EVRYPR",
+          trackingID: process.env.GOOGLE_ANALYTICS_TAG_ID,
           anonymizeIP: true,
         },
       }),
@@ -48,7 +50,7 @@ const config = {
         blogSidebarCount: 0,
         showReadingTime: true,
         editUrl: ({ blogDirPath, blogPath }) => {
-          return `https://github.com/kgajera/blog/edit/main/${blogDirPath}/${blogPath}`;
+          return `https://github.com/${process.env.ORGANIZATION_NAME}/${process.env.REPOSITORY_NAME}/edit/main/${blogDirPath}/${blogPath}`;
         },
       },
     ],
@@ -72,7 +74,7 @@ const config = {
         defaultMode: "dark",
       },
       navbar: {
-        title: "Kishan Gajera",
+        title: process.env.SITE_TITLE,
         logo: {
           alt: "KG Logo",
           src: "img/logo.png",
@@ -110,9 +112,9 @@ const config = {
         copyright: `&copy; ${new Date().getFullYear()} Kishan Gajera. All content is the property of Kishan Gajera and KGajera.com.`,
       },
       algolia: {
-        appId: "MMRPMU69AB",
-        apiKey: "651d4af5a91d5bf208dbeef462c7cba4",
-        indexName: "kgajera",
+        appId: process.env.ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_API_KEY,
+        indexName: process.env.ALGOLIA_INDEX_NAME,
         placeholder: "Search...",
       },
       prism: {

@@ -17,6 +17,18 @@ jobs:
       - run: yarn typecheck
       - run: yarn format:check
       - run: yarn build
+        env:
+          ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
+          ALGOLIA_API_KEY: ${{ secrets.ALGOLIA_API_KEY }}
+          ALGOLIA_INDEX_NAME: ${{ secrets.ALGOLIA_INDEX_NAME }}
+          GISCUS_DISCUSSION_CATEGORY: ${{ secrets.GISCUS_DISCUSSION_CATEGORY }}
+          GISCUS_DISCUSSION_CATEGORY_ID: ${{ secrets.GISCUS_DISCUSSION_CATEGORY_ID }}
+          GISCUS_PROJECT_ID: ${{ secrets.GISCUS_PROJECT_ID }}
+          GOOGLE_ANALYTICS_TAG_ID: ${{ secrets.GOOGLE_ANALYTICS_TAG_ID }}
+          ORGANIZATION_NAME: ${{ secrets.ORGANIZATION_NAME }}
+          REPOSITORY_NAME: ${{ secrets.REPOSITORY_NAME }}
+          SITE_TITLE: ${{ secrets.SITE_TITLE }}
+          SITE_URL: ${{ secrets.SITE_URL }}
       - uses: cypress-io/github-action@v4
         with:
           start: yarn serve
