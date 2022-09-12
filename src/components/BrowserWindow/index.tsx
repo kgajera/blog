@@ -1,5 +1,5 @@
 import React, { type ReactNode } from "react";
-import IconExternalLink from "@theme/IconExternalLink";
+import IconExternalLink from "@theme/Icon/ExternalLink";
 
 import styles from "./styles.module.css";
 

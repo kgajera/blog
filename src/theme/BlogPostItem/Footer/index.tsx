@@ -1,26 +1,27 @@
 import React from "react";
 import Head from "@docusaurus/Head";
-import { useColorMode } from "@docusaurus/theme-common";
+import { useBlogPost } from "@docusaurus/theme-common/internal";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import type { Props } from "@theme/BlogPostItem";
-import OriginalBlogPostItem from "@theme-original/BlogPostItem";
-import TwitterLink from "../components/TwitterLink";
+import Footer from "@theme-original/BlogPostItem/Footer";
+import { useColorMode } from "@docusaurus/theme-common";
 import Giscus from "@giscus/react";
+import TwitterLink from "../../../components/TwitterLink";
 
-function BlogPostItem(props: Props) {
+export default function FooterWrapper(props: {}) {
   const { siteConfig } = useDocusaurusContext();
+  const { metadata, isBlogPostPage } = useBlogPost();
   const { colorMode } = useColorMode();
 
-  if (props.truncated) {
-    return <OriginalBlogPostItem {...props} />;
+  if (!isBlogPostPage) {
+    return <Footer {...props} />;
   }
 
   return (
     <>
       <Head>
-        <title>{props.metadata.title}</title>
+        <title>{metadata.title}</title>
       </Head>
-      <OriginalBlogPostItem {...props} />
+      <Footer {...props} />
       <div className="margin-vert--xl">
         <Giscus
           id="comments"
@@ -47,9 +48,9 @@ function BlogPostItem(props: Props) {
       >
         <TwitterLink
           href={`https://twitter.com/intent/tweet?url=${encodeURIComponent(
-            `${siteConfig.url}${props.metadata.permalink}`
+            `${siteConfig.url}${metadata.permalink}`
           )}&text=${encodeURIComponent(
-            `I just read "${props.metadata.title}" by @kgajera24`
+            `I just read "${metadata.title}" by @kgajera24`
           )}`}
           title="Share on Twitter"
         />
@@ -57,5 +58,3 @@ function BlogPostItem(props: Props) {
     </>
   );
 }
-
-export default BlogPostItem;

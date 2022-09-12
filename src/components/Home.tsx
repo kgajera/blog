@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "@theme/Layout";
 import BlogPostItem from "@theme/BlogPostItem";
 import { Content } from "@theme/BlogPostPage";
+import { BlogPostProvider } from "@docusaurus/theme-common/internal";
 
 interface HomeProps {
   readonly recentPosts: readonly { readonly content: Content }[];
@@ -28,15 +29,14 @@ function Home({ recentPosts }: HomeProps): JSX.Element {
         <div className="row">
           <div className="col col--9 col--offset-1">
             {recentPosts.map(({ content: BlogPostContent }) => (
-              <BlogPostItem
+              <BlogPostProvider
                 key={BlogPostContent.metadata.permalink}
-                frontMatter={BlogPostContent.frontMatter}
-                assets={BlogPostContent.assets}
-                metadata={BlogPostContent.metadata}
-                truncated={BlogPostContent.metadata.truncated}
+                content={BlogPostContent}
               >
-                <BlogPostContent />
-              </BlogPostItem>
+                <BlogPostItem>
+                  <BlogPostContent />
+                </BlogPostItem>
+              </BlogPostProvider>
             ))}
           </div>
         </div>
