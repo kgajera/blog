@@ -40,6 +40,13 @@ article h2 {
   font-size: 2rem !important;
 }
 
+.navbar__link--active,
+.navbar__link--active:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+  text-underline-offset: 21px;
+}
+
 .table-of-contents__link--active {
   font-weight: bold;
 }
