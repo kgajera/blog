@@ -25,8 +25,11 @@ function Contact() {
                 required
                 rows={5}
               />
-              <button className="button button--primary" type="submit">
-                Submit
+              <button
+                className="button button--lg button--primary"
+                type="submit"
+              >
+                Send
               </button>
             </form>
           </div>
