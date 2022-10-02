@@ -1,7 +1,8 @@
 import React from "react";
 
 interface FormFieldProps {
-  label: string;
+  containerClass?: string;
+  label?: string;
 }
 
 interface InputProps
@@ -23,6 +24,7 @@ interface TextareaProps
 }
 
 function FormField({
+  containerClass = "margin-vert--lg",
   fieldType = "input",
   label,
   ...props
@@ -30,8 +32,8 @@ function FormField({
   const id = props.id ?? `form_field_${props.name}`;
 
   return (
-    <div className="margin-vert--lg">
-      <label htmlFor={id}>{label}</label>
+    <div className={containerClass}>
+      {label && <label htmlFor={id}>{label}</label>}
       <div className="margin-top--sm">
         {fieldType === "textarea" ? (
           <textarea id={id} {...(props as TextareaProps)} />
