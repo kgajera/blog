@@ -35,7 +35,7 @@ export default function FooterWrapper(props: {}) {
           inputPosition="top"
           theme={colorMode}
           lang="en"
-          loading="lazy"
+          loading="eager"
         />
       </div>
       <div
