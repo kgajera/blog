@@ -12,7 +12,7 @@ export default function FooterWrapper(props: {}) {
   const { metadata, isBlogPostPage } = useBlogPost();
   const { colorMode } = useColorMode();
 
-  if (!isBlogPostPage) {
+  if (!isBlogPostPage || metadata.source.match(/blog-work/)) {
     return <Footer {...props} />;
   }
 
