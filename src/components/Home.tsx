@@ -14,7 +14,7 @@ function Home({ recentPosts }: HomeProps): JSX.Element {
       <div className="hero hero--dark hero--home shadow--lw">
         <div className="container">
           <div className="row">
-            <div className="col col--9 col--offset-1">
+            <div className="col col--10 col--offset-1">
               <h1 className="hero__title">
                 👋 I'm Kishan, a software engineer.
               </h1>
@@ -27,7 +27,7 @@ function Home({ recentPosts }: HomeProps): JSX.Element {
       </div>
       <div className="container margin-top--xl">
         <div className="row">
-          <div className="col col--9 col--offset-1">
+          <div className="col col--10 col--offset-1">
             {recentPosts.map(({ content: BlogPostContent }) => (
               <BlogPostProvider
                 key={BlogPostContent.metadata.permalink}

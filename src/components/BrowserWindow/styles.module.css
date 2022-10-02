@@ -6,6 +6,10 @@
   margin-bottom: var(--ifm-leading);
 }
 
+.browserWindow a {
+  text-decoration: none !important;
+}
+
 .browserWindowHeader {
   align-items: center;
   background: var(--ifm-color-emphasis-200);
