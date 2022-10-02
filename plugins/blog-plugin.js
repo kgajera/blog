@@ -13,7 +13,7 @@ async function blogPluginExtended(...pluginArgs) {
      */
     contentLoaded: async function (data) {
       // Get the 5 latest blog posts
-      const recentPosts = [...data.content.blogPosts].splice(0, 5);
+      const recentPosts = [...data.content.blogPosts].splice(0, 10);
 
       data.actions.addRoute({
         // Add route for the home page

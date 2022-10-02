@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "@theme/Layout";
 import BlogPostItem from "@theme/BlogPostItem";
 import { Content } from "@theme/BlogPostPage";
+import PaginatorNavLink from "@theme/PaginatorNavLink";
 import { BlogPostProvider } from "@docusaurus/theme-common/internal";
 
 interface HomeProps {
@@ -14,7 +15,7 @@ function Home({ recentPosts }: HomeProps): JSX.Element {
       <div className="hero hero--dark hero--home shadow--lw">
         <div className="container">
           <div className="row">
-            <div className="col col--10 col--offset-1">
+            <div className="col col--9 col--offset-1">
               <h1 className="hero__title">
                 👋 I'm Kishan, a software engineer.
               </h1>
@@ -25,9 +26,9 @@ function Home({ recentPosts }: HomeProps): JSX.Element {
           </div>
         </div>
       </div>
-      <div className="container margin-top--xl">
+      <div className="container margin-top--xl margin-bottom--lg">
         <div className="row">
-          <div className="col col--10 col--offset-1">
+          <div className="col col--9 col--offset-1">
             {recentPosts.map(({ content: BlogPostContent }) => (
               <BlogPostProvider
                 key={BlogPostContent.metadata.permalink}
@@ -38,6 +39,15 @@ function Home({ recentPosts }: HomeProps): JSX.Element {
                 </BlogPostItem>
               </BlogPostProvider>
             ))}
+          </div>
+        </div>
+        <div className="row">
+          <div className="col col--5 col--offset-5">
+            <PaginatorNavLink
+              isNext
+              permalink="/blog/page/2"
+              title="Older Entries"
+            />
           </div>
         </div>
       </div>
