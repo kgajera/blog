@@ -2,7 +2,7 @@
 title: Automate Onboarding Express Accounts in Stripe Test Mode
 authors: [kgajera]
 image: ./cli.png
-tags: [puppeteer, stripe]
+tags: [open-source, puppeteer, stripe]
 ---
 
 While implementing a [Stripe Connect](https://stripe.com/docs/connect) integration, I repeatedly came across the tedious task of onboarding [Express accounts](https://stripe.com/docs/connect/express-accounts) to test the integration, whether that be manual or automated testing. Creating an Express account using Stripe's API is an easy task, but in order for the account to be verified to accept payments and transfers, the account needs to manually complete [onboarding](https://stripe.com/connect/onboarding) forms on a Stripe hosted page. Let's take a look at how I automated the onboarding process.

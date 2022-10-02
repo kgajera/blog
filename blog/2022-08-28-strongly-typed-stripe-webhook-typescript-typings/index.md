@@ -2,7 +2,7 @@
 title: TypeScript typings for Stripe Webhook Events
 authors: [kgajera]
 image: ./typed-webhook-event.gif
-tags: [puppeteer, stripe, typescript]
+tags: [open-source, puppeteer, stripe, typescript]
 ---
 
 I'm working on a project that relies heavily on [Stripe webhooks](https://stripe.com/docs/webhooks) and while implementing the webhook handler, I noticed the lack of type safety increases the risk of error in my implementation. This could be something simple like misspelling the event name or trying to access the event's `data.object` fields incorrectly. For this reason, I built a way to generate typings for all webhook events to strongly type the event object.
