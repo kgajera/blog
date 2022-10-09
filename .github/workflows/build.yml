@@ -20,8 +20,8 @@ jobs:
       SITE_URL: ${{ secrets.SITE_URL }}
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
           node-version: "16"
           cache: "yarn"
@@ -29,11 +29,15 @@ jobs:
       - run: yarn typecheck
       - run: yarn format:check
       - run: yarn build
-      - uses: cypress-io/github-action@v4
+      - run: npx playwright install --with-deps
+      - run: yarn playwright test
+      - uses: actions/upload-artifact@v3
+        if: always()
         with:
-          start: yarn serve
-          wait-on: "http://localhost:3000"
-      - uses: actions/upload-artifact@v2
+          name: playwright-report
+          path: playwright-report/
+          retention-days: 1
+      - uses: actions/upload-artifact@v3
         with:
           name: build
           path: build/
@@ -49,7 +53,7 @@ jobs:
       AWS_REGION: us-east-1
 
     steps:
-      - uses: actions/download-artifact@v2
+      - uses: actions/download-artifact@v3
         with:
           name: build
       - name: AWS S3 - Empty Bucket

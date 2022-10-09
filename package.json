@@ -18,9 +18,7 @@
     "g:blog": "hygen blog new",
     "g:component": "hygen component new",
     "g:page": "hygen page new",
-    "cy:open": "cypress open",
-    "cy:run": "cypress run",
-    "test": "start-server-and-test test:server http://localhost:3000 cy:run",
+    "test": "playwright test",
     "test:server": "docusaurus start --no-open",
     "prepare": "husky install",
     "clean": "rimraf blog/* blog-work/* static/img/*"
@@ -38,8 +36,8 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "2.1.0",
+    "@playwright/test": "^1.27.0",
     "@tsconfig/docusaurus": "^1.0.5",
-    "cypress": "^10.3.0",
     "dotenv": "^16.0.2",
     "husky": "^8.0.0",
     "hygen": "^6.2.0",
