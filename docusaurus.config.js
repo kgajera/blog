@@ -22,7 +22,7 @@ const config = {
     discussionCategory: process.env.GISCUS_DISCUSSION_CATEGORY,
     discussionCategoryId: process.env.GISCUS_DISCUSSION_CATEGORY_ID,
   },
-
+  scripts: getScripts(),
   presets: [
     [
       "classic",
@@ -111,6 +111,7 @@ const config = {
         ],
         copyright: `&copy; ${new Date().getFullYear()} Kishan Gajera. All content is the property of Kishan Gajera and KGajera.com.`,
       },
+
       algolia: {
         appId: process.env.ALGOLIA_APP_ID,
         apiKey: process.env.ALGOLIA_API_KEY,
@@ -126,5 +127,22 @@ const config = {
       },
     }),
 };
+
+function getScripts() {
+  /** @type {import('@docusaurus/types').DocusaurusConfig['scripts']} */
+  const scripts = [];
+
+  if (process.env.NODE_ENV === "production") {
+    if (process.env.GOOGLE_ADSENSE_URL) {
+      scripts.push({
+        src: process.env.GOOGLE_ADSENSE_URL,
+        async: true,
+        crossorigin: "anonymous",
+      });
+    }
+  }
+
+  return scripts;
+}
 
 module.exports = config;
