@@ -10,8 +10,9 @@ function Contact() {
           <div className="col col--6 col--offset-3">
             <h1>Contact Me</h1>
             <form action="https://postform.com/s/kazOv8" method="POST">
-              <FormField label="Your Name" name="name" required />
+              <FormField label="Your Name" name="name" required type="text" />
               <FormField
+                fieldType="input"
                 label="Your Email"
                 name="email"
                 required
