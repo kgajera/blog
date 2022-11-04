@@ -21,7 +21,7 @@
     "test": "playwright test",
     "test:server": "docusaurus start --no-open",
     "prepare": "husky install",
-    "clean": "rimraf blog/* blog-work/* static/img/* static/ads.txt"
+    "clean": "rimraf blog/* blog-work/* static/img/*"
   },
   "dependencies": {
     "@docusaurus/core": "2.1.0",

@@ -22,7 +22,6 @@ const config = {
     giscusDiscussionCategoryId: process.env.GISCUS_DISCUSSION_CATEGORY_ID,
     giscusProjectId: process.env.GISCUS_PROJECT_ID,
   },
-  scripts: getScripts(),
   presets: [
     [
       "classic",
@@ -127,22 +126,5 @@ const config = {
       },
     }),
 };
-
-function getScripts() {
-  /** @type {import('@docusaurus/types').DocusaurusConfig['scripts']} */
-  const scripts = [];
-
-  if (process.env.NODE_ENV === "production") {
-    if (process.env.GOOGLE_ADSENSE_URL) {
-      scripts.push({
-        src: process.env.GOOGLE_ADSENSE_URL,
-        async: true,
-        crossorigin: "anonymous",
-      });
-    }
-  }
-
-  return scripts;
-}
 
 module.exports = config;
