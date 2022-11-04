@@ -18,9 +18,9 @@ const config = {
   organizationName: process.env.ORGANIZATION_NAME,
   projectName: process.env.REPOSITORY_NAME,
   customFields: {
-    projectId: process.env.GISCUS_PROJECT_ID,
-    discussionCategory: process.env.GISCUS_DISCUSSION_CATEGORY,
-    discussionCategoryId: process.env.GISCUS_DISCUSSION_CATEGORY_ID,
+    giscusDiscussionCategory: process.env.GISCUS_DISCUSSION_CATEGORY,
+    giscusDiscussionCategoryId: process.env.GISCUS_DISCUSSION_CATEGORY_ID,
+    giscusProjectId: process.env.GISCUS_PROJECT_ID,
   },
   scripts: getScripts(),
   presets: [
