@@ -6,6 +6,7 @@ This website built using [Docusaurus 2](https://docusaurus.io/), a static websit
 
 ## Getting Started
 
+1. Run `cp .env.example .env` and set values. These environment variables are used in [`docusaurus.config.js`](/docusaurus.config.js).
 1. Run `yarn` to install dependencies
 1. Run `yarn start` to start a local development server
 
