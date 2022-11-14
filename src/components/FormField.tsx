@@ -1,3 +1,4 @@
+import clsx from "clsx";
 import React from "react";
 
 interface FormFieldProps {
@@ -32,7 +33,7 @@ function FormField({
   const id = props.id ?? `form_field_${props.name}`;
 
   return (
-    <div className={containerClass}>
+    <div className={clsx("form-field", containerClass)}>
       {label && <label htmlFor={id}>{label}</label>}
       <div className="margin-top--sm">
         {fieldType === "textarea" ? (

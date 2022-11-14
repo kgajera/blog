@@ -1,5 +1,6 @@
 import React, { FormEvent, useState } from "react";
 import FormField from "./FormField";
+import NetlifyForm from "./NetlifyForm";
 
 function SubscribeForm(): JSX.Element {
   const [email, setEmail] = useState("");
@@ -20,15 +21,14 @@ function SubscribeForm(): JSX.Element {
     setMessage("");
     setIsProcessing(true);
 
-    const action = e.currentTarget.getAttribute("action");
     const method = e.currentTarget.getAttribute("method") ?? "POST";
 
-    const res = await fetch(action, {
-      body: JSON.stringify({ email }),
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json",
-      },
+    const res = await fetch("/", {
+      body: new URLSearchParams({
+        email,
+        "form-name": e.currentTarget.getAttribute("name"),
+      }).toString(),
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
       method,
     });
 
@@ -56,10 +56,9 @@ function SubscribeForm(): JSX.Element {
           {message}
         </div>
       )}
-      <form
-        action="https://postform.com/s/5dcK1U"
+      <NetlifyForm
         className="row"
-        method="POST"
+        name="subscribe"
         onSubmit={submit}
         style={{ alignItems: "center" }}
       >
@@ -83,7 +82,7 @@ function SubscribeForm(): JSX.Element {
             {isProcessing ? "Subscribing" : "Subscribe"}
           </button>
         </div>
-      </form>
+      </NetlifyForm>
     </>
   );
 }

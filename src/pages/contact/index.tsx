@@ -1,6 +1,7 @@
 import React from "react";
 import Layout from "@theme/Layout";
-import FormField from "../../components/FormField";
+import FormField from "@site/src/components/FormField";
+import NetlifyForm from "@site/src/components/NetlifyForm";
 
 function Contact() {
   return (
@@ -9,7 +10,7 @@ function Contact() {
         <div className="row">
           <div className="col col--6 col--offset-3">
             <h1>Contact Me</h1>
-            <form action="https://postform.com/s/kazOv8" method="POST">
+            <NetlifyForm action="/contact/submitted" name="contact">
               <FormField label="Your Name" name="name" required type="text" />
               <FormField
                 fieldType="input"
@@ -18,7 +19,6 @@ function Contact() {
                 required
                 type="email"
               />
-              <input name="website" style={{ display: "none" }} />
               <FormField
                 fieldType="textarea"
                 label="Message"
@@ -32,7 +32,7 @@ function Contact() {
               >
                 Send
               </button>
-            </form>
+            </NetlifyForm>
           </div>
         </div>
       </div>
