@@ -18,8 +18,6 @@
     "g:blog": "hygen blog new",
     "g:component": "hygen component new",
     "g:page": "hygen page new",
-    "test": "playwright test",
-    "test:server": "docusaurus start --no-open",
     "prepare": "husky install",
     "clean": "rimraf blog/* blog-work/* static/img/*"
   },
@@ -36,7 +34,6 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "2.2.0",
-    "@playwright/test": "^1.27.0",
     "@tsconfig/docusaurus": "^1.0.5",
     "dotenv": "^16.0.2",
     "husky": "^8.0.0",
@@ -45,7 +42,6 @@
     "lint-staged": ">=10",
     "prettier": "^2.5.1",
     "rimraf": "^3.0.2",
-    "start-server-and-test": "^1.14.0",
     "typescript": "^4.7.4"
   },
   "browserslist": {
