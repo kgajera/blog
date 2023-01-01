@@ -27,8 +27,8 @@ html[data-theme="dark"] {
   --ifm-color-primary-lightest: #ffffff;
 }
 
-#post-content a,
-.markdown a {
+#post-content a:not(.button),
+.markdown a:not(.button) {
   text-decoration: underline;
 }
 

@@ -19,7 +19,7 @@
     "g:component": "hygen component new",
     "g:page": "hygen page new",
     "prepare": "husky install",
-    "clean": "rimraf blog/* blog-work/* static/img/*"
+    "clean": "rimraf blog/* blog-work/* src/data/* static/img/*"
   },
   "dependencies": {
     "@docusaurus/core": "2.2.0",
