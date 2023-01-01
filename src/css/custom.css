@@ -101,3 +101,7 @@ textarea:focus {
 ::-ms-input-placeholder {
   color: var(--ifm-color-emphasis-800);
 }
+
+html[data-theme="dark"] .DocSearch-Hit[aria-selected="true"] a {
+  background-color: #000;
+}
