@@ -24,7 +24,7 @@ interface TextareaProps
   fieldType: "textarea";
 }
 
-function FormField({
+export function FormField({
   containerClass = "margin-vert--lg",
   fieldType = "input",
   label,
@@ -45,5 +45,3 @@ function FormField({
     </div>
   );
 }
-
-export default FormField;

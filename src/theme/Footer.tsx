@@ -1,6 +1,6 @@
 import OriginalFooter from "@theme-original/Footer";
 import React from "react";
-import SubscribeForm from "../components/SubscribeForm";
+import { SubscribeForm } from "../components/SubscribeForm";
 
 function Footer(props: {}) {
   return (

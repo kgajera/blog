@@ -5,7 +5,7 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Footer from "@theme-original/BlogPostItem/Footer";
 import { useColorMode } from "@docusaurus/theme-common";
 import Giscus from "@giscus/react";
-import TwitterLink from "../../../components/TwitterLink";
+import { TwitterLink } from "../../../components/TwitterLink";
 
 export default function FooterWrapper(props: {}) {
   const { siteConfig } = useDocusaurusContext();

@@ -5,7 +5,7 @@ interface TwitterLinkProps {
   title: string;
 }
 
-function TwitterLink({ href, title }: TwitterLinkProps) {
+export function TwitterLink({ href, title }: TwitterLinkProps) {
   return (
     <a
       className="button button--link"
@@ -43,5 +43,3 @@ function TwitterLink({ href, title }: TwitterLinkProps) {
     </a>
   );
 }
-
-export default TwitterLink;

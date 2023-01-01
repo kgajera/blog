@@ -8,7 +8,7 @@ interface BrowserWindowProps {
   url: string;
 }
 
-function BrowserWindow({
+export function BrowserWindow({
   children,
   url = "http://localhost:3000",
 }: BrowserWindowProps): JSX.Element {
@@ -47,5 +47,3 @@ function BrowserWindow({
     </div>
   );
 }
-
-export default BrowserWindow;

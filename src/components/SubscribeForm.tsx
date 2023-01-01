@@ -1,8 +1,8 @@
 import React, { FormEvent, useState } from "react";
-import FormField from "./FormField";
-import NetlifyForm from "./NetlifyForm";
+import { FormField } from "./FormField";
+import { NetlifyForm } from "./NetlifyForm";
 
-function SubscribeForm(): JSX.Element {
+export function SubscribeForm(): JSX.Element {
   const [email, setEmail] = useState("");
   const [isProcessing, setIsProcessing] = useState(false);
   const [message, setMessage] = useState("");
@@ -86,5 +86,3 @@ function SubscribeForm(): JSX.Element {
     </>
   );
 }
-
-export default SubscribeForm;

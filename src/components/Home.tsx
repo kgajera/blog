@@ -9,7 +9,7 @@ interface HomeProps {
   readonly recentPosts: readonly { readonly content: Content }[];
 }
 
-function Home({ recentPosts }: HomeProps): JSX.Element {
+export function Home({ recentPosts }: HomeProps): JSX.Element {
   return (
     <Layout>
       <div className="hero hero--dark hero--home shadow--lw">
@@ -55,4 +55,5 @@ function Home({ recentPosts }: HomeProps): JSX.Element {
   );
 }
 
+// Default export for plugins/blog-plugin.js
 export default Home;

@@ -1,7 +1,7 @@
 import React from "react";
 import Layout from "@theme/Layout";
-import FormField from "@site/src/components/FormField";
-import NetlifyForm from "@site/src/components/NetlifyForm";
+import { FormField } from "@site/src/components/FormField";
+import { NetlifyForm } from "@site/src/components/NetlifyForm";
 
 function Contact() {
   return (

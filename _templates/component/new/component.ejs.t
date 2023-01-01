@@ -7,8 +7,6 @@ import React from "react";
 interface <%= comp %>Props {
 }
 
-function <%= comp %>({}: <%= comp %>Props) {
+export function <%= comp %>({}: <%= comp %>Props) {
   return (<></>);
 }
-
-export default <%= comp %>;
