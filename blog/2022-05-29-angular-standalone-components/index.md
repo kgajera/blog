@@ -65,16 +65,30 @@ We won't dive into routing in this post, but this where you would define the rou
 
 ## Generating components, directives, and pipes
 
-We generated our app using the [Angular CLI](https://angular.io/cli), and we're also going to use it to generate our component, directive, and pipe files. My opinionated approach is to wrap these CLI commands in the `package.json` with my preferred default options.
+We generated our app using the [Angular CLI](https://angular.io/cli), and we're also going to use it to generate our component, directive, and pipe files. My opinionated approach is to set the following generation options in the `angular.json` file:
 
-```json title=package.json
-"scripts": {
-  ...
-  "g:component": "ng generate component --flat --inline-template --standalone --style=none",
-  "g:directive": "ng generate directive --flat --standalone",
-  "g:pipe": "ng generate pipe --flat --standalone",
-  "g:service": "ng generate service --flat"
-},
+```json title=angular.json
+{
+  "schematics": {
+    "@schematics/angular:component": {
+      "flat": true,
+      "inlineStyle": true,
+      "inlineTemplate": true,
+      "standalone": true,
+      "style": "none"
+    },
+    "@schematics/angular:directive": {
+      "flat": true,
+      "standalone": true
+    },
+    "@schematics/angular:pipe": {
+      "standalone": true
+    },
+    "@schematics/angular:service": {
+      "flat": true
+    }
+  }
+}
 ```
 
 - For components, I prefer:
@@ -88,7 +102,7 @@ We generated our app using the [Angular CLI](https://angular.io/cli), and we're 
 Run the following command to create a new "card" component:
 
 ```
-npm run g:component card
+ng generate component card
 ```
 
 This will generate the following component and we've added simple template to display content in within a styled `div` element:
@@ -116,7 +130,7 @@ And that's it! We don't need to declare or export the `CardComponent` in an `NgM
 Run the following command to create a new directive that we'll use to style our `button` elements:
 
 ```
-npm run g:directive button
+ng generate directive button
 ```
 
 This will generate the following directive and we've added implementation to add Tailwind classes to the host element:
@@ -139,7 +153,7 @@ export class ButtonDirective {
 Run the following command to create a new pipe that we'll use to transform a string to uppercase:
 
 ```
-npm run g:pipe uppercase
+ng generate pipe uppercase
 ```
 
 This will generate the following pipe and we've implemented the `transform` method to simply uppercase a string:
