@@ -22,9 +22,9 @@
     "clean": "rimraf blog/* blog-work/* src/data/* static/img/*"
   },
   "dependencies": {
-    "@docusaurus/core": "^2.3.1",
-    "@docusaurus/preset-classic": "^2.3.1",
-    "@docusaurus/theme-common": "^2.3.1",
+    "@docusaurus/core": "^2.4.0",
+    "@docusaurus/preset-classic": "^2.4.0",
+    "@docusaurus/theme-common": "^2.4.0",
     "@giscus/react": "^2.2.0",
     "@mdx-js/react": "^1.6.22",
     "clsx": "^1.2.1",
@@ -33,7 +33,7 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^2.3.1",
+    "@docusaurus/module-type-aliases": "^2.4.0",
     "@tsconfig/docusaurus": "^1.0.5",
     "dotenv": "^16.0.2",
     "husky": "^8.0.0",
