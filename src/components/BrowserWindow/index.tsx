@@ -23,6 +23,7 @@ export function BrowserWindow({
         <div className={styles.browserWindowAddressBar}>
           <a href={url} target="_blank">
             {url}
+            <IconExternalLink />
           </a>
         </div>
         <div className={styles.browserWindowMenuIcon}>

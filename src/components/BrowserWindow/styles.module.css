@@ -47,6 +47,11 @@ html[data-theme="light"] {
   user-select: none;
 }
 
+.browserWindowAddressBar a {
+  display: inline-flex;
+  align-items: center;
+}
+
 html[data-theme="dark"] .browserWindowAddressBar {
   color: var(--ifm-color-gray-300);
 }
